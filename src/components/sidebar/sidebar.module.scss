@@ -1,0 +1,32 @@
+@import '../../styles/colors';
+
+.sidebar{
+    max-width: 250px;
+    height: 100%;
+    >h1{
+        font-size: 36px;
+        
+    }
+
+    >ul{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+
+        >li{
+            cursor: pointer;
+            padding: 12px;
+            font-size: 20px;
+            font-weight: 400;
+
+            &:first-child{
+                margin: 16px 0 0 0;
+            }
+
+            &:hover{
+                background-color: $laranja;
+                color: #fff;
+            }
+        }
+    }
+}

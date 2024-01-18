@@ -1,0 +1,16 @@
+.container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: start;
+    height: 100%;
+    gap: 32px;
+}

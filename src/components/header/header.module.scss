@@ -1,0 +1,41 @@
+@import '../../styles/colors';
+
+.header{
+    width: 100%;
+    display: flex;
+    >nav{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.barraPesquisa{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 8px;
+    padding: 16px;
+    flex: 0.5;
+    background-color: $cinza;
+    border-radius: 50px;
+
+    >svg{
+        font-size: 20px;
+    }
+
+    >input{
+        font-weight: 400;
+        font-size: 18px;
+        border: none;
+        flex: 1;
+        outline: none;
+        background-color: transparent;
+    }
+}
+
+.listaHeader{
+    display: flex;
+    list-style: none;
+    gap: 12px;
+}

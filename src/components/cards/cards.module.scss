@@ -1,0 +1,46 @@
+@import '../../styles/colors';
+
+.cardComBotao{
+    flex: 1;
+    max-width: 700px;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 30px;
+    background: linear-gradient(to bottom, #dbeaf9 30%, #f7eee9 70%, #eaeafb, #f3f5f6);
+
+    &-texto{
+        margin: 0 64px;
+        flex: 0.5;
+        >div:first-child{
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            >h1{
+                font-size: 36px;
+            }
+
+            >p{
+                color: $preto;
+                font-weight: 500;
+                opacity: 50%;
+                font-size: 24px;
+            }
+        }
+    }
+
+    &-botao{
+        width: 80%;
+        margin: 24px 0;
+    }
+
+    &-imagem{
+        position: absolute;
+        right: 0;
+        bottom: 5%;
+        >img{
+            width: 90%;
+        }
+    }
+}
