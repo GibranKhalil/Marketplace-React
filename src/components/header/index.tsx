@@ -9,7 +9,7 @@ export const Header = () => {
     return (
         <header className={styles.header}>
             <nav>
-                <div><img src={logo} alt="logo site" /></div>
+                <div className={styles['header-logo']}><img src={logo} alt="logo site" /></div>
                 <div className={styles.barraPesquisa}>
                     <IoSearch />
                     <input placeholder="Procure" />

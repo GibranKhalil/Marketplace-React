@@ -12,10 +12,10 @@ export const PaginaBase = ({children}: PaginaBaseProps) => {
     return (
         <div className={styles.container}>
             <Header />
-            <main className={styles.content}>
+            <div className={styles.content}>
                 <Sidebar />
                 {children}
-            </main>
+            </div>
         </div>
     )
 }

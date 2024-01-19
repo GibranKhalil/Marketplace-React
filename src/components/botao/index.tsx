@@ -11,3 +11,11 @@ export const BotaoPadrao = ({texto}: BotaoPadraoProps) =>{
         </button>
     )
 }
+
+export const BotaoPreto = ({texto}: BotaoPadraoProps) =>{
+    return(
+        <button className={styles.botaoPreto}>
+            {texto}
+        </button>
+    )
+}

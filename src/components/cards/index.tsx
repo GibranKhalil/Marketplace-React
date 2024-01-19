@@ -1,4 +1,5 @@
-import { BotaoPadrao } from '../botao'
+import { ReactElement } from 'react'
+import { BotaoPadrao, BotaoPreto } from '../botao'
 import styles from './cards.module.scss'
 
 interface CardComTextoEImagemProps {
@@ -13,7 +14,7 @@ export const CardComTextoEImagemPrincipal = ({ urlImg, textoBotao, textoDestaque
         <div className={styles.cardComBotao}>
             <div className={styles['cardComBotao-texto']}>
                 <div>
-                    <h1>{textoDestaque}</h1>
+                    <h1>{textoDestaque.toUpperCase()}</h1>
                     <p>{subTexto}</p>
                 </div>
                 <div className={styles['cardComBotao-botao']}>
@@ -27,12 +28,82 @@ export const CardComTextoEImagemPrincipal = ({ urlImg, textoBotao, textoDestaque
     )
 }
 
-interface CardComTextoProps{
-    texto: string
+interface CardComTextoProps {
+    texto: ReactElement
 }
 
-export const CardComTexto = ({texto}: CardComTextoProps) =>{
-    return(
-        <div></div>
+export const CardComTexto = ({ texto }: CardComTextoProps) => {
+    return (
+        <div className={styles.cardSoTexto}>
+            {texto}
+        </div>
+    )
+}
+
+interface CardComTextoImgMenorProps {
+    textoDestaque: string
+    textoBotao: string
+    urlImg: string
+    corDoObjeto: string
+}
+
+
+
+export const CardComTextoImgMenor = ({ textoDestaque, textoBotao, urlImg, corDoObjeto }: CardComTextoImgMenorProps) => {
+
+    function hexToRgb() {
+        corDoObjeto = corDoObjeto.replace(/^#/, '');
+        let bigint = parseInt(corDoObjeto, 16);
+        let r = (bigint >> 16) & 255;
+        let g = (bigint >> 8) & 255;
+        let b = bigint & 255;
+        return { r, g, b }
+    }
+
+    const { r, g, b } = hexToRgb()
+    const style = {
+        backgroundColor: `rgba(${r}, ${g}, ${b}, 0.5)`
+    }
+
+    return (
+        <div style={style} className={styles.cardTextoImgMenor}>
+            <div className={styles['cardTextoImgMenor-texto']}>
+                <h1>{textoDestaque}</h1>
+                <BotaoPreto texto={textoBotao} />
+            </div>
+            <div className={styles['cardTextoImgMenor-img']}>
+                <img src={urlImg} alt='Foto Produto' />
+            </div>
+        </div>
+    )
+}
+
+interface  CardFundoColoridoProdutoProps {
+    texto: string
+    imagem: string
+    corDoObjeto: string
+}
+
+export const CardFundoColoridoProduto = ({ texto, imagem, corDoObjeto }:  CardFundoColoridoProdutoProps) => {
+
+    function hexToRgb() {
+        corDoObjeto = corDoObjeto.replace(/^#/, '');
+        let bigint = parseInt(corDoObjeto, 16);
+        let r = (bigint >> 16) & 255;
+        let g = (bigint >> 8) & 255;
+        let b = bigint & 255;
+        return { r, g, b }
+    }
+
+    const { r, g, b } = hexToRgb()
+    const style = {
+        backgroundColor: `rgba(${r}, ${g}, ${b}, 0.15)`
+    }
+
+    return (
+        <div style={style} className={styles.cardFundoColoridoProduto}>
+            <img src={imagem} alt={`imagem categoria: ${texto}`} /> 
+            <p>{texto}</p>
+        </div>
     )
 }

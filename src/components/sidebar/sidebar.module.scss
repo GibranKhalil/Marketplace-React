@@ -2,10 +2,10 @@
 
 .sidebar{
     max-width: 250px;
+    min-width: 230px;
     height: 100%;
     >h1{
-        font-size: 36px;
-        
+        font-size: 30px;
     }
 
     >ul{
@@ -17,7 +17,7 @@
             cursor: pointer;
             padding: 12px;
             font-size: 20px;
-            font-weight: 400;
+            font-weight: 500;
 
             &:first-child{
                 margin: 16px 0 0 0;

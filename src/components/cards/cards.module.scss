@@ -3,29 +3,32 @@
 .cardComBotao{
     flex: 1;
     max-width: 700px;
-    min-height: 350px;
+    min-width: 700px;
+    min-height: 400px;
     display: flex;
     align-items: center;
     position: relative;
     border-radius: 30px;
-    background: linear-gradient(to bottom, #dbeaf9 30%, #f7eee9 70%, #eaeafb, #f3f5f6);
+    background:  $degrade;
+    color: $preto;
 
     &-texto{
         margin: 0 64px;
-        flex: 0.5;
+        flex: 0.6;
         >div:first-child{
             display: flex;
             flex-direction: column;
             gap: 16px;
             >h1{
                 font-size: 36px;
+                font-weight: 900;
             }
 
             >p{
                 color: $preto;
                 font-weight: 500;
                 opacity: 50%;
-                font-size: 24px;
+                font-size: 18px;
             }
         }
     }
@@ -36,11 +39,121 @@
     }
 
     &-imagem{
+        animation: flutuante 3s ease-in-out;
+        animation-iteration-count: infinite;
         position: absolute;
-        right: 0;
-        bottom: 5%;
+        right: -5%;
+        bottom: 16%;
         >img{
             width: 90%;
+        }
+    }
+}
+
+@keyframes flutuante{
+    0%{
+        transform: translateY(10px);
+        rotate: (5deg);
+    }
+    50%{
+        transform: translateY(-10px);
+        rotate: (0deg);
+    }
+    0%{
+        transform: translateY(0px);
+        rotate: (0deg);
+    }
+}
+
+.cardSoTexto{
+    padding: 24px;
+    height: auto;
+    min-height: 180px ;
+    max-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 30px;
+    background:  $degradeLaranjaAzul;
+    color: $preto;
+
+    >p{
+        width: 100%;
+        font-size: 28px;
+        text-align: center;
+        font-weight: 800;
+    }
+}
+
+.cardTextoImgMenor{
+    padding: 36px;
+    height: auto;
+    height: 180px;
+    max-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    border-radius: 30px;
+    
+    &-texto{
+        
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        
+        
+        >h1{
+            font-weight: 700;
+            font-size: 24px;
+            color: $preto;
+        }
+        >button{
+            width: 50%;
+        }
+    }
+
+    &-img{
+        position: absolute;
+        right: 5%;
+        bottom: 15%;
+        >img{
+            width: 100%;
+        }
+    }
+}
+
+.cardFundoColoridoProduto{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    min-width: 200px;
+    min-height: 300px;
+    max-width: 250px;
+    padding: 24px;
+    cursor: pointer;
+    
+
+    >img{
+        width: 60%;
+        height: 130px;
+        transition: 0.3s;
+    }
+
+    >p{
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    &:hover{
+        >img{
+            transform: scale(1.1);
         }
     }
 }

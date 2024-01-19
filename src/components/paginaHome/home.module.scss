@@ -1,0 +1,29 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.homeBanner{
+    display: flex;
+    gap: 32px;
+
+    &-cardsMenores{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+.categoriasContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 10px 0 50px 0 ;
+}
+
+.categorias{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
