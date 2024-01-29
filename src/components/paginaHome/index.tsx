@@ -5,8 +5,9 @@ import controle from '@/assets/controleBege.png'
 import cadeira from '@/assets/cadeiraLaranja.png'
 import bolsa from '@/assets/bolsaVerde.png'
 import chaleira from '@/assets/chaleira azul.png'
-
 import styles from './home.module.scss'
+
+
 
 export const Home = () => {
     return (

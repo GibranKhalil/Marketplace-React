@@ -1,5 +1,5 @@
 import { ReactElement } from 'react'
-import { BotaoPadrao, BotaoPreto } from '../botao'
+import { BotaoPadrao, BotaoPretoAnimado } from '../botao'
 import styles from './cards.module.scss'
 
 interface CardComTextoEImagemProps {
@@ -69,7 +69,7 @@ export const CardComTextoImgMenor = ({ textoDestaque, textoBotao, urlImg, corDoO
         <div style={style} className={styles.cardTextoImgMenor}>
             <div className={styles['cardTextoImgMenor-texto']}>
                 <h1>{textoDestaque}</h1>
-                <BotaoPreto texto={textoBotao} />
+                <BotaoPretoAnimado texto={textoBotao} />
             </div>
             <div className={styles['cardTextoImgMenor-img']}>
                 <img src={urlImg} alt='Foto Produto' />
@@ -79,7 +79,7 @@ export const CardComTextoImgMenor = ({ textoDestaque, textoBotao, urlImg, corDoO
 }
 
 interface  CardFundoColoridoProdutoProps {
-    texto: string
+    texto?: string
     imagem: string
     corDoObjeto: string
 }
@@ -102,7 +102,7 @@ export const CardFundoColoridoProduto = ({ texto, imagem, corDoObjeto }:  CardFu
 
     return (
         <div style={style} className={styles.cardFundoColoridoProduto}>
-            <img src={imagem} alt={`imagem categoria: ${texto}`} /> 
+            <img src={imagem} alt={`imagem: ${texto}`} /> 
             <p>{texto}</p>
         </div>
     )

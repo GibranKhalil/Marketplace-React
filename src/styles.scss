@@ -1,11 +1,15 @@
 @import './styles/colors';
 
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat';
-    color: $preto;
+
+    >p, >h1, >h2, >h3{
+        color: $preto;
+    }
 }
 
 body{
@@ -14,3 +18,18 @@ body{
     overflow-x: hidden;
     padding: 36px;
 }
+
+::-webkit-scrollbar {
+    width: 10px; /* Largura da barra de rolagem */
+  }
+  
+  /* Estiliza o botão de rolagem (ponteiro) */
+  ::-webkit-scrollbar-thumb {
+    background-color: #CCC; /* Cor da barra de rolagem */
+    border-radius: 8px; /* Borda arredondada */
+  }
+  
+  /* Estiliza a área da barra de rolagem não coberta pelo botão de rolagem */
+  ::-webkit-scrollbar-track {
+    background-color: transparent; /* Cor da área da barra de rolagem não coberta */
+  }

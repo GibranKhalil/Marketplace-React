@@ -4,12 +4,14 @@ import { FiShoppingBag } from "react-icons/fi";
 import styles from './header.module.scss'
 import { FotoArredondada, IconeArredondado } from "../iconeArredondado";
 import logo from '@/assets/logo.png'
+import { useNavigate } from "react-router-dom";
 
 export const Header = () => {
+    const redirecionar = useNavigate()
     return (
         <header className={styles.header}>
             <nav>
-                <div className={styles['header-logo']}><img src={logo} alt="logo site" /></div>
+                <div className={styles['header-logo']}><img onClick={() => redirecionar('/')} src={logo} alt="logo site" /></div>
                 <div className={styles.barraPesquisa}>
                     <IoSearch />
                     <input placeholder="Procure" />

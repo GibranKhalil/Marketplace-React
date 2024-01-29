@@ -8,8 +8,8 @@ export const Sidebar = () => {
         <aside className={styles.sidebar}>
             <h1>Categorias</h1>
             <ul>
-                {categorias.map(categoria => (
-                    <li>{categoria}</li>
+                {categorias.map((categoria, index) => (
+                    <li key={index}>{categoria}</li>
                 ))}
             </ul>
         </aside>
